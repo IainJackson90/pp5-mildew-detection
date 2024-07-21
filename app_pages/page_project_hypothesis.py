@@ -13,3 +13,7 @@ def page_project_hypothesis_body():
         f"any clear pattern to differentiate one from another."
 
     )
+    
+    st.write(
+       f"For more information, please visit and **read** the "
+       f"[Project README file](https://github.com/IainJackson90/pp5-mildew-detection#readme).")
