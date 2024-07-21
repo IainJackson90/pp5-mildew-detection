@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def page_project_hypothesis_body():
-    st.write("### Project Hypothesis and Validation")
+    st.write("### Project Hypothesis")
 
     st.success(
         f"* We suspect cherry leaves exhibiting a white, powdery coating on the surface, "
