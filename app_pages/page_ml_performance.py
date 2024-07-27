@@ -53,6 +53,11 @@ def page_ml_performance_metrics():
         st.image(model_loss, caption='Model Training Losses')
     st.write("---")
     
+    st.write("### Accuracy and Loss model")
+    mrg_model = plt.imread(f"outputs/{version}/model_merged_acc.png")
+    st.image(mrg_model, caption='Accuracy and Loss model')
+    st.write("---")
+    
     st.write("### Confusion Matrix")
     cm_matrix = plt.imread(f"outputs/{version}/confusion_matrix.png")
     st.image(cm_matrix, caption='Confusion Matrix')
