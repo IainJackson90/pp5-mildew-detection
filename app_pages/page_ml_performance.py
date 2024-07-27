@@ -20,17 +20,18 @@ def page_ml_performance_metrics():
             f"* test - powdery_mildew: 211 images\n\n"
             )
     
-    st.info( f"I used image shape from v2, \n"
+    st.info( f"I used image shape from v11, \n"
             f"a batch size of one, \n"
             f"with experimenting I found I got the best results with four Convolutional blocks \n"
             f"The filters were set as follows: \n\n"
             f"* First Convolutional Block: 16 \n"
             f"* Second Convolutional Block: 32 \n"
             f"* Third Convolutional Block: 64 \n"
-            f"* Fourth Convolutional Block: 128 \n\n"
+            f"* Fourth Convolutional Block: 128 \n"
+            f"* Fith Convolutional Block: 256 \n\n"
             f"Dropout was set to 0.5, \n"
             f"the flatten block density was set to 128, \n"
-            f"and the optimizer that was used is 'adam' with a patience of 4 and a total of 25 epochs"
+            f"and the optimizer that was used is 'SGD' with a patience of 3 and a total of 25 epochs"
             )
     
     st.write(
