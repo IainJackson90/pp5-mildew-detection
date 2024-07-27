@@ -6,7 +6,7 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_ml_performance_metrics():
-    version = 'v3'
+    version = 'v11'
 
     st.write("### Train, Validation and Test Set: Labels Frequencies")
     
@@ -50,6 +50,11 @@ def page_ml_performance_metrics():
     with col2:
         model_loss = plt.imread(f"outputs/{version}/model_training_losses.png")
         st.image(model_loss, caption='Model Training Losses')
+    st.write("---")
+    
+    st.write("### Confusion Matrix")
+    cm_matrix = plt.imread(f"outputs/{version}/confusion_matrix.png")
+    st.image(cm_matrix, caption='Confusion Matrix')
     st.write("---")
 
     st.write("### Generalised Performance on Test Set")
