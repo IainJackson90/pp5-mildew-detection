@@ -29,10 +29,11 @@ def page_summary_body():
         f"")
 
     st.success(
-        f"The project has three business requirements:\n\n"
+        f"**The project has four business requirements:\n\n"
         f"1 - A study to visually differentiate a healthy from an infected leaf.\n\n"
         f"2 - An accurate prediction whether a given leaf is infected by powdery mildew or not. \n\n"
         f"3 - Download a prediction report of the examined leaves."
+        f"4 - We agreed with the client a degree of 97% accuracy"
         )
 
     st.write(
