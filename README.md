@@ -12,6 +12,10 @@
 
 ## Business Requirements
 
+The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
+
+To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+
 ### Business Requirement 1: 
 
 The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
@@ -113,7 +117,7 @@ I thenproceeded to unzip the folders first clean the data to insure I only have 
    An example of this would look like this:
 
    - <details>
-     <summary>Bar graph displaying the amount of images in each set:</summary>
+     <summary>Example of Agumented images</summary>
 
      ![Agumented](assets/images/agumented.png)
 
@@ -308,6 +312,48 @@ It simultaneously shows a decrease and low final values for both validation and 
 
 The model has successfully learned the patterns in the training set and can generalize these patterns to unseen validation data without overfitting
 
+The model has a general performance of 99.53%
+
+# ![Performance](assets/images/performance.png)
+
+# Manual Testing
+
+| What was tested | Result | Outcome |
+|:---:|:---:|:---:|
+|Clicked on the radio buttons in the menu|Changed to the desired page|Works as intended|
+|Clicked the close button on the menu|Hides the menu|Works as intended|
+|Cliked the links on evry page |directs you to the desired page|Works as intended|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+|-----|-----|-----|
+
+
 ## Bugs
 
 1. On model v5 there is a bug where the confusion matrix does not display corectly as this was the first implimantastion of it I did and fixed it for futre models
@@ -329,27 +375,82 @@ For futre development there are a few idias that could be cosidred:
 3. Have a section that shows on a map where farmers are experancing crop decieses with a heatmap showing the intensety of the spead of the decieses. 
 
 ## Deployment
-   
-### Forking the Repository
 
-### Making a local clone
+### Heroku
 
-## Technologies used
+- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
+- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+- The project was deployed to Heroku using the following steps.
 
-### Platforms
+1. Log in to Heroku and create an App
+2. At the Deploy tab, select GitHub as the deployment method.
+3. Select your repository name and click Search. Once it is found, click Connect.
+4. Select the branch you want to deploy, then click Deploy Branch.
+5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
+6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
-### Languages
 
-### Main Data Analysis and Machine Learning Libraries
+## _Cloning the GitHub repository_
 
-## Credits
+This will download a full copy to your desktop
 
-### Content
+1. Log into GitHub
+2. Find the repository you wish to clone
+3. Find the green code button top right corner
+4. Select "Local", copy the HTTPS URL
+5. Go to Codeanywhere and navigate to "New Workspace"
+6. Paste the URL into the space provided
+7. Click "Create"
 
-### Media
+## _Forking the GitHub repository_
 
-### Code
+Will allow you to create a copy of the repository so changes can be made that will not affect the original repository.
 
-### Acknowledgements
+1. Log into GitHub
+2. Find the repository you wish to fork
+3. Find the "Fork" drop down in the top right corner second from last
+4. Select "Create"  
+
+# Technologies Used
+
+- [Python](https://www.python.org/) languge 
+- [Markdown](https://en.wikipedia.org/wiki/Markdown) languge
+- [Heroku](https://en.wikipedia.org/wiki/Heroku) for deploy of this project
+- [Jupiter Notebook](https://jupyter.org/) to edit and create code for the model
+- [Kaggle](https://www.kaggle.com/) to download dataset images 
+- [GitHub](https://github.com/): storing files online and for deployment
+- [Gitpod](https://www.gitpod.io/) to write the code
+- [Snipping Tool](https://freesnippingtool.com/download) to create sniped images
+- [amiresponsive](https://ui.dev/amiresponsive) to check responsiveness
+
+# Libaries used
+
+- [numpy](https://numpy.org/doc/stable/)
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/)
+- [matplotlib](https://matplotlib.org/stable/contents.html)
+- [seaborn](https://seaborn.pydata.org/)
+- [plotly](https://plotly.com/python/)
+- [streamlit](https://docs.streamlit.io/)
+- [scikit-learn](https://scikit-learn.org/stable/user_guide.html)
+- [tensorflow-cpu](https://www.tensorflow.org/versions/r2.0/api_docs/python/tf)
+- [keras](https://keras.io/api/)
+- [protobuf](https://developers.google.com/protocol-buffers/docs/overview)
+- [altair](https://altair-viz.github.io/index.html)
+
+
+
+# Credits
+
+- Code Institute for the learning content provided
+- MO Shami my assigned mentor to give advise on the project
+- Nicole Jackson my wife a student at code institute for constructive criticism
+- Slack community
+- Code Institute walktrough project 5 mileria detection
+- [stackoverflow](https://stackoverflow.com/)
+- [chatgpt](https://openai.com/index/chatgpt/)
+- [Underfitted](https://www.youtube.com/watch?v=H2M3fT1njXQ)
+- [cla-cif
+](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector?tab=readme-ov-file#the-process-of-cross-industry-standard-process-for-data-mining) 
+- [tomdu3](https://github.com/tomdu3/brain-tumor-detector) 
 
 
