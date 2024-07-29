@@ -22,7 +22,7 @@ def page_ml_performance_metrics():
             f"* Second Convolutional Block: 32 \n"
             f"* Third Convolutional Block: 64 \n"
             f"* Fourth Convolutional Block: 128 \n"
-            f"* Fith Convolutional Block: 256 \n\n"
+            f"* Fifth Convolutional Block: 256 \n\n"
             f"Dropout was set to 0.5, \n"
             f"the flatten block density was set to 128, \n"
             f"and the optimizer that was used is 'SGD' with a patience of 3 and a total of 25 epochs"
@@ -54,7 +54,7 @@ def page_ml_performance_metrics():
     with col1:
         model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
         st.image(model_acc, caption='Model Training Accuracy')
-        st.info( f"Here we can see taht the model is able to learn and perform well on training data\n"
+        st.info( f"Here we can see that the model is able to learn and perform well on training data\n"
             f"and generalizes well to unseen data (Val_accuracy) which is crucial for real-world application \n"
             )
     with col2:

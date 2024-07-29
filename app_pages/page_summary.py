@@ -19,7 +19,7 @@ def page_summary_body():
         f"**Project Dataset**\n\n"
         f"The dataset uses can be found on [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)\n\n"
         f"The available dataset contains healthy leaves and affected leaves "
-        f"You can manually adjust the dataset size by specifying the percentage of data you want to use(Backend and is curently set at 50%) "
+        f"You can manually adjust the dataset size by specifying the percentage of data you want to use(Backend and is currently set at 50%) "
         f"The data is split into : \n\n" 
         f"* The training set is divided into a 0.70 ratio of data.\n"
         f"* The validation set is divided into a 0.10 ratio of data\n"

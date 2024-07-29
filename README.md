@@ -465,12 +465,16 @@ For future development there are a few ideas that could be considered:
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
+1. Login to Heroku
+2. On the Heroku dashboard click on 'New'
+3. Select 'Create New App'
+4. Add an app name (Must be a unique name) and select your region
+5. Click 'Create App'
+6. At the top of the page again, click 'Deploy'
+7. Click on 'Github' as your deployment method
+8. Search the relevant repo and link 
+9. Once linked, select 'Automatic deploys from' or 'Manual Deploy'
+10. The app will now be hosted on Heroku.
 
 ## _Cloning the GitHub repository_
 
