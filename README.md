@@ -323,36 +323,10 @@ The model has a general performance of 99.53%
 |Clicked on the radio buttons in the menu|Changed to the desired page|Works as intended|
 |Clicked the close button on the menu|Hides the menu|Works as intended|
 |Cliked the links on evry page |directs you to the desired page|Works as intended|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-|-----|-----|-----|
-
+|Cliked on all three check boxes|displayd inteded content|Works as intended|
+|Draged and droped a image on desegnated area|Predicted the images corectly|Works as intended|
+|Cliked on the dowload report link| Opend a excel spreadsheet with the report|works as intended|
+|Draged and droped more than one image|Predicts images corectly |works as intended|
 
 ## Bugs
 
@@ -364,7 +338,9 @@ The model has a general performance of 99.53%
 
     </details>
 
-2. I would not describe this as a bug but as an isuue that can be attended to in the futre, I found evrytime I made a new model I could have created a global variable where I can change the version on one place rather than have to change it indevidualy at multiple difrent places   
+2. I would not describe this as a bug but as an isuue that can be attended to in the futre, I found evrytime I made a new model I could have created a global variable where I can change the version on one place rather than have to change it indevidualy at multiple difrent places 
+
+3. I wanted to run another model v12 but after doig all the data colection and preporation I have decided against it the image motage is loaded from the  
 
 ## Futre development
 
@@ -372,8 +348,7 @@ For futre development there are a few idias that could be cosidred:
 
 1. Create a dropdwon to not ony identify chery leaves but aswell as other crops for the farmer
 2. Create database when multiple users start loging on and using the webb aplication it will grow the database and in return train the model more efectivley
-3. Have a section that shows on a map where farmers are experancing crop decieses with a heatmap showing the intensety of the spead of the decieses. 
-
+ 
 ## Deployment
 
 ### Heroku

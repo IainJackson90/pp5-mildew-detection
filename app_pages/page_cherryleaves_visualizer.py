@@ -29,7 +29,7 @@ def page_cherryleaves_visualizer_body():
        f"For more information, please visit and **read** the "
        f"[Project README file](https://github.com/IainJackson90/pp5-mildew-detection#readme).")
     
-    version = 'v12'
+    version = 'v11'
     if st.checkbox("Difference between average and variability image"):
       
       avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
