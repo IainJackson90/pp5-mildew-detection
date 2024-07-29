@@ -302,19 +302,31 @@ Here is how each model performed :
 
 ## Hypothesis and validation
 
-**1. Introduction**
+The model is well tuned and effectively balanced
 
-**2. Observation**
+It simultaneously shows a decrease and low final values for both validation and training losses, alongside with close alignment of the curves
 
-**3. Conclusion**
+The model has successfully learned the patterns in the training set and can generalize these patterns to unseen validation data without overfitting
 
 ## Bugs
 
-### Fixed Bug
+1. On model v5 there is a bug where the confusion matrix does not display corectly as this was the first implimantastion of it I did and fixed it for futre models
+ - <details>
+    <summary>Here you can see it is displaying incorectly (Model v5)</summary>
+    
+    ![Confusion Matrix](outputs/v5/confusion_matrix.png)
 
-## Unfixed Bug
+    </details>
+
+2. I would not describe this as a bug but as an isuue that can be attended to in the futre, I found evrytime I made a new model I could have created a global variable where I can change the version on one place rather than have to change it indevidualy at multiple difrent places   
 
 ## Futre development
+
+For futre development there are a few idias that could be cosidred:
+
+1. Create a dropdwon to not ony identify chery leaves but aswell as other crops for the farmer
+2. Create database when multiple users start loging on and using the webb aplication it will grow the database and in return train the model more efectivley
+3. Have a section that shows on a map where farmers are experancing crop decieses with a heatmap showing the intensety of the spead of the decieses. 
 
 ## Deployment
    
