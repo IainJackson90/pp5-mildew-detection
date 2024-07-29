@@ -1,6 +1,6 @@
 # ![Am I responsive](assets/images/amiresponsive.png)
 
-### Deployed web aplication [Mildew Detection](https://pp5mildewdeiain-8e8f491a1401.herokuapp.com/)
+### Deployed web application [Mildew Detection](https://pp5mildewdeiain-8e8f491a1401.herokuapp.com/)
 
 ## Table of Contents
 1. [](#)
@@ -16,38 +16,122 @@ The cherry plantation crop from Farmy & Foods is facing a challenge where their 
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
 
-### Business Requirement 1: 
+How will the client benefit?
+The client will not supply the market with a product of compromised quality.
+
+### Business Requirement 1:
 
 The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
 
-### Business Requirement 2: 
+### Business Requirement 2:
 
 The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 ### Business Requirement 3:
 
-We agreed with the client a degree of 97% accuracy.
+We agreed with the client to a degree of 97% accuracy.
 
 ### Business Requirement 4:
 
 The client is interested in obtaining a prediction report of the examined leaves.
 
+### Business Requirement 5:
+
+#### Dashboard should contain:
+
+- A project summary page
+- A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew
+- A page containing ;
+  - A link to download a set of cherry leaf images for live prediction
+  - A User Interface with a file uploader widget
+  - A table with the image name and prediction results, and a download button to download the table
+- A page indicating your project hypothesis
+- A technical page displaying model performance
+
+## Epics:
+
+1. Information Gathering and Data Collection:
+
+   - Importing images from a dataset using [Kaggle](https://www.kaggle.com/)
+
+2. Data Visualization, Cleaning, and Preparation:
+
+    - Preparing the data for the model :
+        - clean the data and insure there are no double images
+        - split the images into train, validate and test sets
+        - Argument the images
+
+3. Model Training, Optimization, and Validation:
+
+    - Teach the model using various different means trough trial and error to find the best outcome to meet the business requirements
+
+4. Dashboard Planning, Designing, and Development:
+
+    - Create a dashboard that is user friendly and easily readable
+
+5. Dashboard Deployment and Release:
+
+    - Deploy the dashboard so that is more easily accessible to the end user
+
+## User Stories/Tasks:
+
+Information Gathering and Data Collection:
+
+ - User Story: As a data analyst/developer, I can download the dataset needed from Kaggle
+    - Task: Download the zip folders from Kaggle .
+
+Data Visualization, Cleaning, and Preparation:
+
+ - User Story: As a data analyst/developer, I can clean the data and remove all duplicate images as well as remove all relevant images and data
+
+ - User Story: As a data analyst/developer, I can prepare the data into the correct steps to  use to train the ml model
+
+     - Task: Split the data into train, validation and test sets
+     - Task: Resized all the images
+     - Task: Get the mean and variability of images per label
+     - Task: Count of how many images there are in the tarin, test and validation sets
+     - Task: Augmented training and validation images
+
+Model Training, Optimization, and Validation:
+
+ - User Story: As a data analyst/developer, I can train a model to have good accuracy but at the same time have good performance
+ - User Story: As a data analyst/developer, I can insure the model meets the minimum accuracy requirements
+
+     - Task: Create and train a model with multiple convolutional layers.
+     - Task: find the best optimizers and parameters to meet the business requirements of 97% accuracy.
+     - Task: Test the Models performance.
+
+Dashboard Planning, Designing, and Development:
+
+ - User Story: As a data analyst/developer, I can create a user friendly dashboard that can be interacted with.
+ 
+ - User Story: As a data analyst/developer, I can develop a dasboard that meets the business requirements
+
+     - Task: Create the pages as agreed upon the business requirements
+     - Task: Display the data to the user in an easily readable format
+     - Task: Must be user friendly dashboard and should not leave the user with any confusion or navigation issues
+
+Dashboard Deployment and Release:
+
+ - User Story: As a data analyst/developer, I can deploy the project so that it is easily accessible to the users
+     - Task: Deploy the final project.
+
 ## Dashboard Design (Streamlit App User Interface)
 
-### [Streamlit](https://streamlit.io/) was used to create the dashboard for easy uses and prenst data
+### [Streamlit](https://streamlit.io/) was used to create the dashboard for easy uses and present data
 
 #### Page One: Project Summary
 
-The project summary page is the ladning page, it is the first page you will see. 
-It in detail explains the General information, Project dataset and Business requirments.
+The project summary page is the landing page, it is the first page you will see.
+It in detail explains the General information, Project dataset and Business requirements.
 
 #### Page Two: Cherryleaves Visualizer
 
-On this page you can see the differences between average healthy and powdery-mildew leaves aswell as a image montage of healthy or powdery-mildew leaves.
+On this page you can see the differences between average healthy and powdery-mildew leaves as well as an image montage of healthy or powdery-mildew leaves.
 
 #### Page Three: Powdery mildew detection
 
-On this page you can dowload a photo from the link provided or if you have a picture of a cherry leaf you can drag and drop it onto the page, it will the give you a pridition of the leaf with a option to dowload a report of the prediction.
+On this page you can download a photo from the link provided or if you have a picture of a cherry leaf you can drag and drop it onto the page, it will then give you a prediction of the leaf with an option to download a report of the prediction.
 
 #### Page Three: Hypothesis
 
@@ -55,16 +139,16 @@ Here you will find a hypothesis of how to identify a healthy cherry leaf from a 
 
 #### Page Three: Ml Performance Metrics
 
-This page has the perfomance of the model been used for the dashboard going into depth about the model and the performance of it.
+This page has the performance of the model been used for the dashboard going into depth about the model and the performance of it.
 
 ## The goal
 
-The goal is to meet all the buisness requirements aswell as display it in a format that is easaly readable to anyone using the dasboard but aswell as have a section for users who are more intrested of the indepth results of the model
+The goal is to meet all the business requirements as well as display it in a format that is easily readable to anyone using the dashboard but as well as have a section for users who are more interested of the indepth results of the model
 
 ## Dataset Content (for model v11)
 
-1. The data was gatherd from [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) and dowloaded into zipfolders that cosited of healthy leaf photos aswell as powdery-mildew photos.
-I thenproceeded to unzip the folders first clean the data to insure I only have images and then deleted fifty percent of the data from both files and this was the rusult of the image count 
+1. The data was gathered from [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) and downloaded into zip folders that consisted of healthy leaf photos as well as powdery-mildew photos.
+I then proceeded to unzip the folders first clean the data to insure I only have images and then deleted fifty percent of the data from both files and this was the result of the image count
 
    - Folder: healthy - has 2104 image files
    - Folder: healthy - has 0 non-image files
@@ -75,15 +159,15 @@ I thenproceeded to unzip the folders first clean the data to insure I only have 
    - Folder: healthy - has 1052 images remaining
    - Folder: powdery_mildew - has 1052 images remaining
 
-2. I split the data into train, valaidation and test sets as follows
+2. I split the data into train, validation and test sets as follows
 
    - The training set is divided into a 0.70 ratio of data.
    - The validation set is divided into a 0.10 ratio of data.
    - The test set is divided into a 0.20 ratio of data.
 
-3. I then resized all the images 
+3. I then resized all the images
 
-   - Mean width of images: 256 
+   - Mean width of images: 256
    - Mean height of images: 256
 
 4. I then got the mean and variability of images per label
@@ -97,6 +181,7 @@ I thenproceeded to unzip the folders first clean the data to insure I only have 
 
      </details>
 
+
 5. I do a count of how many images there are in the tarin, test and validation stes.
    The count is as follow
 
@@ -109,27 +194,28 @@ I thenproceeded to unzip the folders first clean the data to insure I only have 
    - <details>
      <summary>Bar graph displaying the amount of images in each set:</summary>
 
-     ![Test, Train and validtion sets](outputs/v11/labels_distribution.png)
+     ![Test, Train and validation sets](outputs/v11/labels_distribution.png)
 
      </details>
 
-6. I then agumented training and validation images in hopes the model will pick up on more paterns of the leaves.
+
+6. I then augmented training and validation images in hopes the model will pick up on more patterns of the leaves.
    An example of this would look like this:
 
    - <details>
-     <summary>Example of Agumented images</summary>
+     <summary>Example of Augmented images</summary>
 
-     ![Agumented](assets/images/agumented.png)
+     ![Augmented](assets/images/agumented.png)
 
      </details>
 
 ## Model (V11)
 
-The model shows rapid improvement for both loss and accuracy within the first few epochs, the model then achives and maintains high accuracy and low loss indecating effective learning and good generalization whithout 
+The model shows rapid improvement for both loss and accuracy within the first few epochs, the model then archives and maintains high accuracy and low loss indicating effective learning and good generalization without
 overfitting
 
 <details>
-<summary>Here is a Graph pf the model</summary>
+<summary>Here is a Graph of the model</summary>
 
 ![Model](outputs/v11/model_merged_acc.png)
 
@@ -137,10 +223,10 @@ overfitting
 
 **Loss**
 
-  - The model shows a reapid reduction in traing and validation losses int he first few epochs indecating that the model is learning efectively
+  - The model shows a rapid reduction in training and validation losses in the first few epochs indicating that the model is learning effectively
   - The model losses then remains close to zero after the first few epochs showing that the model in not overfitting
-  - The model losses stabelizes but there are some sings of fluctuctuation wich indicats some overfitting but not significant enough for me to deem this model not acceptable 
-  - Overall the model demostrates excellent performance with low value losses 
+  - The model losses stabilizes but there are some signs of fluctuation which indicates some overfitting but not significant enough for me to deem this model not acceptable
+  - Overall the model demonstrates excellent performance with low value losses
   - <details>
     <summary>Here is a Graph pf the models training losses</summary>
 
@@ -150,12 +236,12 @@ overfitting
 
 **Accuracy**
 
-  - The model shows rapid increase in accuracy in both validation and traing within the firs few epochs
-  - There is no significant overfitting as the modeld stabilazes quickly with high accuaracy
-  - The close alingment of both trainig and validation sugest good performance of the model
-  - Overall the model shows excelent accuracy and high perfomance as well as mainaining this troughout the process
+  - The model shows rapid increase in accuracy in both validation and training within the first few epochs
+  - There is no significant overfitting as the model stabilizes quickly with high accuracy
+  - The close alignment of both training and validation suggest good performance of the model
+  - Overall the model shows excellent accuracy and high performance as well as maintaining this throughout the process
   - <details>
-    <summary>Here is a Graph pf the models training accuracy</summary>
+    <summary>Here is a Graph of the models training accuracy</summary>
 
     ![Training accuracy](outputs/v11/model_training_acc.png)
 
@@ -163,50 +249,50 @@ overfitting
 
 **Confusion Matrix**
 
-Here we can see the model is highly accurate, correctly predicting a vast majority of instances in both classes. There are very few errors (Only two false negatives and no false positives) 
+Here we can see the model is highly accurate, correctly predicting a vast majority of instances in both classes. There are very few errors (Only two false negatives and no false positives)
 
  - <details>
-    <summary>Here is the Cofusion Matrix reults</summary>
+    <summary>Here is the Confusion Matrix results</summary>
 
     ![Cofusion Matrix](outputs/v11/confusion_matrix.png)
 
     </details>
 
-**Optimizer** 
+**Optimizer**
 
-I used SGD as the optomizer fot this model as I have found better results using it, this the code I usesd.
-For the loss I went wit binary_crossentopy with metrics as ccuaracy
+I used SGD as the optimizer for this model as I have found better results using it, this the code I used.
+For the loss I went wit binary_crossentopy with metrics as accuracy
 
   - <details>
-    <summary>Code Snippit of optimizer</summary>
+    <summary>Code Snippet of optimizer</summary>
 
-    ![Code Snippit](assets/images/optimizer.png)
+    ![Code Snippet](assets/images/optimizer.png)
 
     </details>
 
-**Model Code explenation**
+**Model Code explanation**
 
-- For this model(v11) I have used five convolutional starting of with 16 filters increasing is size I found that this would stabelize the model.
-- This model has a dropout set to 0.5 wich prevents too much overfittig or underfitting of this moddel
+- For this model(v11) I have used five convolutional layers starting off with 16 filters increasing in size. I found that this would stabilize the model.
+- This model has a dropout set to 0.5 which prevents too much overfitting or underfitting of this model
 - A batch size of one was used
 - Patience was set to 3 to insure the model would stop at the right time to prevent overfitting
-- This model dense was set at 128 I found better performans at this value
+- This model dense was set at 128 I found better performance at this value
 
  - <details>
-    <summary>Code Snippits of the model</summary>
+    <summary>Code Snippets of the model</summary>
 
     ![Model Snippet](assets/images/modelsnipit.png)
-    ![Batch size Snippit](assets/images/batchsize.png)
-    ![Patience Snippit](assets/images/patience.png)
+    ![Batch size Snippet](assets/images/batchsize.png)
+    ![Patience Snippet](assets/images/patience.png)
 
     </details>
 
 ## Trial and error
 
-When creating this model it did not come without complicatition (Overfittin then underfitting) this is the elevnth model trhou trail and error is these only way I have acheved thes results I have used three difrent optomizers adam, RMS porp and SGD.
-I have also used difrent patciance values, densety values aswel as difrent convolutional lairs.
+When creating this model it did not come without complication (Overfittin And underfitting) this is the eleventh model through trial and error. This is the only way I have to achieve these results. I have used three different optimizers Adam, RMS prop and SGD.
+I have also used different patience values, density values as well as different convolutional lairs.
 
-At first I ran a few models but found I did not realy understand how the model was performing in regards to the relation to accuracy and value loss aswell as what classes it should improve on to solve this I have added more graphs to display the results in a better more readable way for me to see what the model is actualy dong and how I could improve on it.
+At first I ran a few models but found I didn't really understand how the model was performing in regards to the relation to accuracy and value loss as well as what classes it should improve on to solve this I have added more graphs to display the results in a better more readable way for me to see what the model is actually doing and how I could improve on it.
 
 Here is how each model performed :
 
@@ -301,9 +387,7 @@ Here is how each model performed :
     ![Confusion Matrix](outputs/v11/confusion_matrix.png)
 
     </details>
-    
-
-
+   
 ## Hypothesis and validation
 
 The model is well tuned and effectively balanced
@@ -322,32 +406,32 @@ The model has a general performance of 99.53%
 |:---:|:---:|:---:|
 |Clicked on the radio buttons in the menu|Changed to the desired page|Works as intended|
 |Clicked the close button on the menu|Hides the menu|Works as intended|
-|Cliked the links on evry page |directs you to the desired page|Works as intended|
-|Cliked on all three check boxes|displayd inteded content|Works as intended|
-|Draged and droped a image on desegnated area|Predicted the images corectly|Works as intended|
-|Cliked on the dowload report link| Opend a excel spreadsheet with the report|works as intended|
-|Draged and droped more than one image|Predicts images corectly |works as intended|
+|Clicked the links on every page |directs you to the desired page|Works as intended|
+|Clicked on all three check boxes|displayed intended content|Works as intended|
+|Clicked on all options in the image montage dropdown|displayed intended content|Works as intended|
+|Dragged and dropped a image on designated area|Predicted the images correctly|Works as intended|
+|Clicked on the download report link| Open a excel spreadsheet with the report|works as intended|
+|Dragged and dropped more than one image|Predicts images correctly |works as intended|
 
 ## Bugs
 
-1. On model v5 there is a bug where the confusion matrix does not display corectly as this was the first implimantastion of it I did and fixed it for futre models
+1. On model v5 there is a bug where the confusion matrix does not display correctly as this was the first implementation of it I did and fixed it for future models
  - <details>
-    <summary>Here you can see it is displaying incorectly (Model v5)</summary>
-    
+    <summary>Here you can see it is displaying incorrectly (Model v5)</summary>
+   
     ![Confusion Matrix](outputs/v5/confusion_matrix.png)
 
     </details>
 
-2. I would not describe this as a bug but as an isuue that can be attended to in the futre, I found evrytime I made a new model I could have created a global variable where I can change the version on one place rather than have to change it indevidualy at multiple difrent places 
+2. I would not describe this as a bug but as an issue that can be attended to in the future, I found every time I made a new model I could have created a global variable where I can change the version on one place rather than have to change it individually at multiple different places
 
-3. I wanted to run another model v12 but after doig all the data colection and preporation I have decided against it the image motage is loaded from the  
+## Future development
 
-## Futre development
+For future development there are a few ideas that could be considered:
 
-For futre development there are a few idias that could be cosidred:
-
-1. Create a dropdwon to not ony identify chery leaves but aswell as other crops for the farmer
-2. Create database when multiple users start loging on and using the webb aplication it will grow the database and in return train the model more efectivley
+1. Create a dropdown to not only identify cherry leaves but as well as other crops for the farmer
+2. Create database when multiple users start logging on and using the web application it will grow the database and in return train the model more effectively
+3. Create a heatmap of the infected crops of farmers so that farmers can see what is happening in their surrounding areas
  
 ## Deployment
 
@@ -363,7 +447,6 @@ For futre development there are a few idias that could be cosidred:
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
-
 
 ## _Cloning the GitHub repository_
 
@@ -388,31 +471,27 @@ Will allow you to create a copy of the repository so changes can be made that wi
 
 # Technologies Used
 
-- [Python](https://www.python.org/) languge 
-- [Markdown](https://en.wikipedia.org/wiki/Markdown) languge
+- [Python](https://www.python.org/) language
+- [Markdown](https://en.wikipedia.org/wiki/Markdown) language
 - [Heroku](https://en.wikipedia.org/wiki/Heroku) for deploy of this project
 - [Jupiter Notebook](https://jupyter.org/) to edit and create code for the model
-- [Kaggle](https://www.kaggle.com/) to download dataset images 
+- [Kaggle](https://www.kaggle.com/) to download dataset images
 - [GitHub](https://github.com/): storing files online and for deployment
 - [Gitpod](https://www.gitpod.io/) to write the code
 - [Snipping Tool](https://freesnippingtool.com/download) to create sniped images
 - [amiresponsive](https://ui.dev/amiresponsive) to check responsiveness
 
-# Libaries used
+# Libraries used
 
-- [numpy](https://numpy.org/doc/stable/)
-- [pandas](https://pandas.pydata.org/pandas-docs/stable/)
-- [matplotlib](https://matplotlib.org/stable/contents.html)
-- [seaborn](https://seaborn.pydata.org/)
-- [plotly](https://plotly.com/python/)
-- [streamlit](https://docs.streamlit.io/)
-- [scikit-learn](https://scikit-learn.org/stable/user_guide.html)
-- [tensorflow-cpu](https://www.tensorflow.org/versions/r2.0/api_docs/python/tf)
-- [keras](https://keras.io/api/)
-- [protobuf](https://developers.google.com/protocol-buffers/docs/overview)
-- [altair](https://altair-viz.github.io/index.html)
-
-
+- [numpy](https://numpy.org/doc/stable/) converting to array
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/) creating/saving as dataframe
+- [matplotlib](https://matplotlib.org/stable/contents.html) plotting the sets
+- [seaborn](https://seaborn.pydata.org/) confusion matrix
+- [plotly](https://plotly.com/python/)  model learning curve
+- [streamlit](https://docs.streamlit.io/) creating the dashboard
+- [scikit-learn](https://scikit-learn.org/stable/user_guide.html) evaluating the model
+- [tensorflow-cpu](https://www.tensorflow.org/versions/r2.0/api_docs/python/tf) creating the model
+- [keras](https://keras.io/api/) setting the model hyperparameters
 
 # Credits
 
@@ -420,12 +499,17 @@ Will allow you to create a copy of the repository so changes can be made that wi
 - MO Shami my assigned mentor to give advise on the project
 - Nicole Jackson my wife a student at code institute for constructive criticism
 - Slack community
-- Code Institute walktrough project 5 mileria detection
+- Code Institute walkthrough project 5 malaria detection
 - [stackoverflow](https://stackoverflow.com/)
 - [chatgpt](https://openai.com/index/chatgpt/)
 - [Underfitted](https://www.youtube.com/watch?v=H2M3fT1njXQ)
 - [cla-cif
-](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector?tab=readme-ov-file#the-process-of-cross-industry-standard-process-for-data-mining) 
-- [tomdu3](https://github.com/tomdu3/brain-tumor-detector) 
+](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector?tab=readme-ov-file#the-process-of-cross-industry-standard-process-for-data-mining)
+- [tomdu3](https://github.com/tomdu3/brain-tumor-detector)
+
+
+
+
+
 
 
