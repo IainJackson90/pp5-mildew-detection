@@ -8,17 +8,18 @@
 3. [User Stories and tasks](#user-stories-and-tasks)
 4. [Dashboard Design](#dashboard-design-streamlit-app-user-interface)
 5. [The goal](#the-goal)
-6. [Dataset Content (for model v11)](#dataset-content-for-model-v11)
-7. [Model (V11)](#model-v11)
-8. [Trial and error](#trial-and-error)
-9. [Hypothesis and validation](#hypothesis-and-validation)
-10. [Manual Testing](#manual-testing)
-11. [Bugs](#bugs)
-12. [Future development](#future-development)
-13. [Deployment](#deployment)
-14. [Technologies Used](#technologies-used)
-15. [Libraries used](#libraries-used)
-16. [Credits](#credits)
+6. [ML Business Case](#ml-business-case)
+7. [Dataset Content (for model v11)](#dataset-content-for-model-v11)
+8. [Model (V11)](#model-v11)
+9. [Trial and error](#trial-and-error)
+10. [Hypothesis and validation](#hypothesis-and-validation)
+11. [Manual Testing](#manual-testing)
+12. [Bugs](#bugs)
+13. [Future development](#future-development)
+14. [Deployment](#deployment)
+15. [Technologies Used](#technologies-used)
+16. [Libraries used](#libraries-used)
+17. [Credits](#credits)
 
 ## Business Requirements
 
@@ -155,6 +156,19 @@ This page has the performance of the model been used for the dashboard going int
 
 The goal is to meet all the business requirements as well as display it in a format that is easily readable to anyone using the dashboard but as well as have a section for users who are more interested of the indepth results of the model
 
+## ML Business Case
+
+- The outcome of this project should help farmers predict infected cherry leaves from uninfected ones with a easily usable dashboard and allow them to download the results for future uses.
+
+- The model achieved an accuracy of 99% or above on the test set.
+
+- The model will predict whether a leaf is infected or not at a very fast speed allowing the farmer to check many leaves in a short time frame with a very high accuracy.
+
+- The diagnostics of the outcome should be easily readable and understandable by any farmer who knows how to use the ml model
+
+- The training data will be downloaded from [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
+
+- Train data - To train a model to identify whether a cherry leaf is infected or not
 ## Dataset Content (for model v11)
 
 1. The data was gathered from [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) and downloaded into zip folders that consisted of healthy leaf photos as well as powdery-mildew photos.
