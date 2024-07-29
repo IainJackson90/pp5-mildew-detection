@@ -3,12 +3,22 @@
 ### Deployed web application [Mildew Detection](https://pp5mildewdeiain-8e8f491a1401.herokuapp.com/)
 
 ## Table of Contents
-1. [](#)
-2. [](#)
-3. [](#)
-4. [](#)
-5. [](#)
-6. [](#)
+1. [Business Requirements](#business-requirements)
+2. [Epics](#epics)
+3. [User Stories and tasks](#user-stories-and-tasks)
+4. [Dashboard Design](#dashboard-design-streamlit-app-user-interface)
+5. [The goal](#the-goal)
+6. [Dataset Content (for model v11)](#dataset-content-for-model-v11)
+7. [Model (V11)](#model-v11)
+8. [Trial and error](#trial-and-error)
+9. [Hypothesis and validation](#hypothesis-and-validation)
+10. [Manual Testing](#manual-testing)
+11. [Bugs](#bugs)
+12. [Future development](#future-development)
+13. [Deployment](#deployment)
+14. [Technologies Used](#technologies-used)
+15. [Libraries used](#libraries-used)
+16. [Credits](#credits)
 
 ## Business Requirements
 
@@ -73,7 +83,7 @@ The client is interested in obtaining a prediction report of the examined leaves
 
     - Deploy the dashboard so that is more easily accessible to the end user
 
-## User Stories/Tasks:
+## User Stories and tasks:
 
 Information Gathering and Data Collection:
 
