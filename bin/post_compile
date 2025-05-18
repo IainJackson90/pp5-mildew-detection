@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Installing build dependencies..."
+pip install --upgrade pip
+pip install setuptools wheel
+echo "Build dependencies installed."
